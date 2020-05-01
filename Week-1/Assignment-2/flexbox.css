@@ -1,8 +1,8 @@
 /*---Basic Styles---*/
 *{
     box-sizing: border-box;
-    border-style: solid;
-    border-color: black;
+    /* border-style: solid;
+    border-color: black; */
 }
 
 body{
