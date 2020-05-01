@@ -1,8 +1,8 @@
 /*---Basic Styles---*/
 *{
     box-sizing: border-box;
-    border-style: solid;
-    border-color: black; 
+    /* border-style: solid;
+    border-color: black; */
 }
 
 body{
@@ -16,12 +16,14 @@ body{
 .main-header {
     height: 10%;
     display: flex;
+    flex-direction: row;
 }
 .main-nav {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: space-evenly;
+    margin-left: auto; 
 }
 
 .banner, 
@@ -30,6 +32,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: stretch;
 }
 
 .banner {
@@ -38,13 +41,6 @@ body{
 
 .section-box {
     padding: 2px;
-}
-.section-box li{
-    text-align: center;
-    list-style: none;
-    padding: 7px 20% 20%;
-    margin: 10px;
-    background-color: lightgray;
 }
 .main-footer {
     margin-bottom: 10px;
@@ -67,6 +63,12 @@ body{
     margin-right: 10px;
     margin-left: auto;
 }
+
+.main-nav li{
+    list-style-type: none;
+    margin: 1em; 
+}
+
 .headline {
     text-align: center;
     flex-grow: 1; 
@@ -75,6 +77,18 @@ body{
     margin: 20px 0px 0px;
     text-align: center;
 }
+
+.section-box li{
+    text-align: center;
+    list-style: none;
+    display: block; 
+    flex: 1; 
+    padding: 7px 20% 20%;
+    margin: 10px;
+    background-color: lightgray;
+    align-self: center;
+}
+
 .action {
     padding: 4px 7px;
     background-color: powderblue;
@@ -92,35 +106,25 @@ body{
         display: none;
     }
 }
-@media(min-width: 500px) and (max-width: 799px){
+@media(min-width: 500px) {
     .section-box{
         display: flex;
         flex-direction: row; 
-        flex-wrap: wrap;
-        justify-content: space-between;
+        flex-wrap: wrap; 
+        justify-content: center;
     }
-    .menu {
-        display: none;
+    .section-box li{
+    flex: 1; 
     }
 
 }
-@media(min-width: 800px) and (max-width: 1200 px){
-    /* .main-nav li{
+@media(min-width: 800px) {
+    .main-nav li{
         align-self: flex-end;
-    } */
+    } 
     .menu {
         display: none;
     }
 
 }
-@media(min-width: 1200px) {
-    .menu {
-        display: none;
-    }
-}   
-
-@media (min-width: 500px){
-    .main-header{
-
-    }
-}
+ 
