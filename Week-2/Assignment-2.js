@@ -1,10 +1,22 @@
-/*function subtract(args) {
-    return args.n1 - args.n2;
+// 2 Ways of Creating an Object
+// the first way
+var args = [
+    { op: "+", n1: 33, n2: 42 },
+    { op: "-", n1: 50, n2: 20 }
+]
+
+// the second way
+class Args {
+    constructor(op, n1, n2) {
+        this.op = op;
+        this.n1 = n1;
+        this.n2 = n2;
+    }
 }
-var args.n1 = 33;
-var args.n2 = 45;
-console.log(subtract());
-*/
+const arg1 = new Args('+', 33, 42);
+const arg2 = new Args('-', 50, 20);
+
+
 function calculate(args) {
     let result;
     if (args.op === "+") {
@@ -17,4 +29,3 @@ function calculate(args) {
     } return result;
 }
 
-console.log()
