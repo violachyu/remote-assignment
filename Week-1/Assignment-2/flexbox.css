@@ -1,8 +1,8 @@
 /*---Basic Styles---*/
 *{
     box-sizing: border-box;
-    /* border-style: solid;
-    border-color: black; */
+    border-style: solid;
+    border-color: black;
 }
 
 body{
@@ -81,10 +81,9 @@ body{
 .section-box li{
     text-align: center;
     list-style: none;
-    display: block; 
     flex: 1; 
     padding: 7px 20% 20%;
-    margin: 10px;
+    margin: 5px;
     background-color: lightgray;
     align-self: center;
 }
@@ -101,6 +100,20 @@ body{
 
 
 /*---Media Queries---*/
+@media(max-width: 500px){
+    .section-box{
+        display: flex;
+        flex-direction: column; 
+        justify-content: center;
+    }
+    .under-box {
+        margin-top: 0px;
+    }
+    #article {
+        margin-top: 0px; 
+    }
+
+}
 @media (max-width: 799px){
     .main-nav{
         display: none;
@@ -109,22 +122,31 @@ body{
 @media(min-width: 500px) {
     .section-box{
         display: flex;
-        flex-direction: row; 
-        flex-wrap: wrap; 
+        flex-direction: column; 
         justify-content: center;
     }
-    .section-box li{
-    flex: 1; 
+    .top-box, 
+    .under-box {
+        display: flex; 
+        flex-direction: row;
     }
 
 }
-@media(min-width: 800px) {
+@media(min-width: 800px) and (max-width: 1200px){
     .main-nav li{
         align-self: flex-end;
     } 
     .menu {
         display: none;
     }
-
 }
- 
+@media(min-width: 1200px) {
+    .section-box li{
+        width: 550px; 
+        height: 200px;
+    }
+    .top-box, 
+    .under-box {
+        margin: 0px 50px 0px; 
+    }
+}
