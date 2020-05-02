@@ -78,12 +78,14 @@ body{
     text-align: center;
 }
 
+
 .section-box li{
     text-align: center;
     list-style: none;
     flex: 1; 
     padding: 7px 20% 20%;
     margin: 5px;
+    max-width: 500px; 
     background-color: lightgray;
     align-self: center;
 }
@@ -106,12 +108,6 @@ body{
         flex-direction: column; 
         justify-content: center;
     }
-    .under-box {
-        margin-top: 0px;
-    }
-    #article {
-        margin-top: 0px; 
-    }
 
 }
 @media (max-width: 799px){
@@ -129,10 +125,11 @@ body{
     .under-box {
         display: flex; 
         flex-direction: row;
+        justify-content: center;
     }
 
 }
-@media(min-width: 800px) and (max-width: 1200px){
+@media(min-width: 800px) {
     .main-nav li{
         align-self: flex-end;
     } 
