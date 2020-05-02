@@ -1,9 +1,12 @@
 // 2 Ways of Creating an Object
 // the first way
-var args = [
+var argAll = [
     { op: "+", n1: 33, n2: 42 },
     { op: "-", n1: 50, n2: 20 }
 ]
+arg1 = argAll[0];
+arg2 = argAll[1];
+
 
 // the second way
 class Args {
@@ -28,4 +31,5 @@ function calculate(args) {
         result = "Not supported";
     } return result;
 }
+console.log(calculate(arg1));
 

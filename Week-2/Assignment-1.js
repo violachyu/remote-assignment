@@ -15,7 +15,7 @@ console.log(max([5, 2, 7, 1, 6]));
 
 // findPosition
 function findPosition(numbers, target) {
-    for (i = 0; i <= numbers.length; i++) {
+    for (i = 0; i < numbers.length; i++) {
         if (target == numbers[i]) {
             return i;
         } else if (target !== numbers[i] && i == numbers.length) {
