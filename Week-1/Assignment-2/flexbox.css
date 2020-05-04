@@ -82,10 +82,12 @@ body{
 .section-box li{
     text-align: center;
     list-style: none;
-    flex: 1; 
-    padding: 7px 20% 20%;
+    max-width: 500px;  
+    padding-top: 7px; 
+    padding-bottom: 20%;
     margin: 5px;
-    max-width: 500px; 
+    width: 45%; 
+    height: 20%; 
     background-color: lightgray;
     align-self: center;
 }
@@ -139,8 +141,7 @@ body{
 }
 @media(min-width: 1200px) {
     .section-box li{
-        width: 550px; 
-        height: 200px;
+        max-width: 500px; 
     }
     .top-box, 
     .under-box {
