@@ -42,6 +42,11 @@ body{
 .section-box {
     padding: 2px;
 }
+.top-box, 
+.under-box {
+    display: flex; 
+    flex-direction: column;
+}
 .main-footer {
     margin-bottom: 10px;
 }
@@ -90,7 +95,7 @@ body{
     height: 20%; 
     background-color: lightgray;
     align-self: center;
-}
+} 
 
 .action {
     padding: 4px 7px;
