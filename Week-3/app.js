@@ -1,18 +1,15 @@
 
 const express = require("express");
-
 const app = express();
 
-app.get('/', (req, res) => {
-    res.send('Hello, My Server!');
-})
+const mainRoutes = require('./routes/index');
+// const getDataRoutes = require('./routes/getData');
 
-app.get('/getData', (req, res) => {
-    res.send('Lack of Parameter');
-})
+app.use('/', mainRoutes);
+// app.use('/getData', getDataRoutes);
 
-// app.get('/', (req, res) => {   
-//     res.send('Hello, My Server!');
-// })
+// app.set('view engine', 'pug');
 
-app.listen(3000);
+app.listen(3000, () => {
+    console.log("App is running!");
+});
