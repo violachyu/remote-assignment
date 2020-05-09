@@ -1,7 +1,7 @@
 // Require https module
 const https = require('https');
 
-function ajax(src, callback) {
+function ajax(src, callback) { //callback can't be called?
     // your code here
     // Connect to the API URL: request
     var xhr = new XMLHttpRequest();
