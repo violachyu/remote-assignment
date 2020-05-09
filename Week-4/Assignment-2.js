@@ -3,18 +3,17 @@ const https = require('https');
 
 function ajax(src, callback) {
     // your code here
-
     // Connect to the API URL: request
     var xhr = new XMLHttpRequest();
     xhr.onreadystatechange = function () {
         if (xhr.readyState === 4 && xhr.status === 200) {
             // Read the data
-            const callback = () => {
+            function callback(){
                 document.getElementsByTagName('p').innerHTML = xhr.responseText;
             };
         }
     };
-    xhr.open('GET', src);
+    xhr.open('GET', src, true);
     xhr.send();
 }
 
@@ -24,8 +23,7 @@ function render(data) {
     const header = document.querySelector('main-header');
     let dataSpace = document.createElement('p');
     header.appendChild(dataSpace);
-    // const data = ;
-    dataSpace.textContent = data; //?
+    dataSpace.textContent = data.JSON.parse(this.responseText); // 將JSON格式資料轉為物件
 }
 
 ajax("https://cwpeng.github.io/live-records-samples/data/products.json", function (response) {
