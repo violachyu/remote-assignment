@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week-3 Assignment-3</title>
+</head>
+<script>
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function loadDoc() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            for (var i = 1; i <= inputNum; i++) {
+                let inputNum = document.getElementById('input').value;
+                var sum = 0;
+                sum += i;
+            } return sum;
+        }
+        document.getElementById('ajax').innerHTML = 'Total: ' + xhr.responseText;
+    }
+    xhr.open("POST", "/getData?number=(inputNum)"); //?
+    xhr.send(inputNum);
+
+</script>
+
+<body>
+    <h3>Please enter a number:</h3>
+    <input type="text" id='input' name="input"></input>
+    <button type="submit" onlick="loadDoc()">Submit</button>
+    <p id="ajax"></p>
+
+</body>
+
+</html>
