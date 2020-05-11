@@ -18,8 +18,9 @@
         }
         document.getElementById('ajax').innerHTML = 'Total: ' + xhr.responseText;
     }
-    xhr.open("POST", "/getData?number=(inputNum)"); //?
-    xhr.send(inputNum);
+    let url = "/getData?number=${inputNum}" //?
+    xhr.open("POST", url, true);
+    xhr.send();
 
 </script>
 
